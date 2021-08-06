@@ -1,1 +1,1 @@
-git remote add origin https://github.com/Sakhawat-Saim/E-marketing-service-provider.git
+Github link for code: https://github.com/Sakhawat-Saim/E-marketing-service-provider.git
