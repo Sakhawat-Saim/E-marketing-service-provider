@@ -28,7 +28,7 @@ const NavBar = () => {
       });
   };
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
       <Container>
         <Navbar.Brand href="#home">
           <span style={{ color: "skyblue" }}>E</span>-MARKETING
@@ -47,22 +47,36 @@ const NavBar = () => {
             </Link>
           </Nav>
           <Nav>
+            {/* {!SignedInUser.photoURL && ( */}
             <div>
               <img
-                style={{ width: "40px", borderRadius: "50%" }}
+                style={{
+                  width: "40px",
+                  borderRadius: "50%",
+                  // border: "2px solid white",
+                  padding: "1%",
+                }}
                 src={SignedInUser.photoURL}
                 alt=""
               />
-              {SignedInUser.displayName}
+              <span style={{ color: "white" }}>{SignedInUser.displayName}</span>
             </div>
+            {/* )} */}
             <div>
               {!SignedInUser.displayName && (
                 <Link to="/sign-in">
-                  <Button>Sign In</Button>
+                  <Button style={{ backgroundColor: "darkblue" }}>
+                    Sign In
+                  </Button>
                 </Link>
               )}
               {SignedInUser.displayName && (
-                <Button onClick={() => handleSignOutButton()}>Sign Out</Button>
+                <Button
+                  style={{ backgroundColor: "darkblue" }}
+                  onClick={() => handleSignOutButton()}
+                >
+                  Sign Out
+                </Button>
               )}
             </div>
           </Nav>
